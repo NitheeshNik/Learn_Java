@@ -11,6 +11,7 @@ public class UserInput {
 		System.out.print("Enter your age: ");
 		int age = sc.nextInt();
 		System.out.printf("Hi %s, you are %d years old.", name, age);
+		System.out.println("nitheesh");
 	
 		
 		
