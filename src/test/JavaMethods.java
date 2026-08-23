@@ -19,6 +19,7 @@ public class JavaMethods {
 	void str(String a, String b, String c) { // method with 3 argument 
 		System.out.println("Result -" + a+ b+ c);
 	}
+	// main function
 	public static void main(String[] args) {
 		JavaMethods caller = new JavaMethods();
 		caller.addition();
