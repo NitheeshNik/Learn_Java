@@ -72,14 +72,13 @@ public class operators {
 
 		// || opeator
 		System.out.println((5 < 3) || (8 > 5)); // true
-		System.out.println((5 > 3) || (8 < 5)); // true
 		System.out.println((5 < 3) || (8 < 5)); // false
 
 		// !
 		System.out.println(!(5 == 3)); // true
 		System.out.println(!(5 > 3)); // false
 
-		System.out.println("\nunary opeator");
+		System.out.println("\nunary operator");
 		// declare variables
 		int a3 = 12, b3 = 12;
 		int result1, result2;
