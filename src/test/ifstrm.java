@@ -17,6 +17,7 @@ public class ifstrm {
 		} else {
 			System.out.println("First class");
 		}
+		hold.close();
 
 	}
 
