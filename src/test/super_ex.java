@@ -1,4 +1,3 @@
-package test;
 
 public class super_ex {
 	String fruit = "apple";

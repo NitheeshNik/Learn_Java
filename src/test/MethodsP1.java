@@ -1,4 +1,3 @@
-package test;
 
 public class MethodsP1 {   
 	 public static double calculateArea(double length, double width){

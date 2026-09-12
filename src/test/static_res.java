@@ -1,4 +1,3 @@
-package test;
 
 public class static_res {
 	static void display() {

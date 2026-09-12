@@ -1,4 +1,3 @@
-package test;
 
 public class this_ex {
 	String name;

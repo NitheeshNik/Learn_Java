@@ -1,4 +1,3 @@
-package test;
 
 public class BankAccount {
 	private double balance;

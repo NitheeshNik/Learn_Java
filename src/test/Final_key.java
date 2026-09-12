@@ -1,4 +1,3 @@
-package test;
 
 public class Final_key {
 	final void run() { // the final keyword restric the method you can't directly override or modifi this

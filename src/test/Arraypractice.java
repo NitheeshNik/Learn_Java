@@ -1,4 +1,3 @@
-package test;
 
 public class Arraypractice {
 	public static void main(String[] args) {

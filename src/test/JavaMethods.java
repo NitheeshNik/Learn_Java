@@ -1,4 +1,3 @@
-package test;
 
 public class JavaMethods {
 	void addition() { // method without argument
