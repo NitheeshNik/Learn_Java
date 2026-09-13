@@ -13,5 +13,10 @@ class String_ex {
         System.out.println(s.length());
         System.out.println(s.charAt(3)); // only print spacific character
 
+        // Convert any datatype into string
+        String h = "1, nik,jini,2021";
+        h.toString();
+        String d[] = h.split(",");
+        System.out.println(d[3]);// array split
     }
 }
