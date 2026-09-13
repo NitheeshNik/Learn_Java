@@ -8,7 +8,7 @@ class Const {
 
     public static void main(String args[]) {
 
-        Const obj = new Const();
+        Const obj = new Const(); // default constructor.
 
     }
 
