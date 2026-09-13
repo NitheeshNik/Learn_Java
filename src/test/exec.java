@@ -1,12 +1,14 @@
 class exec {
-
-    public static void main(String[] args) {
+    public static void main(String[] var0) {
         try {
-            int a = 10 / 0;
-            System.out.println(a);
-        } catch (Exception e) {
-            System.out.println(e);
+            int var1 = 10 / 0;
+            System.out.println(var1);
+        } catch (Exception var5) {
+            System.out.println(var5);
+        } finally {
+            System.out.println("Finally block is always executed");
         }
+
         System.out.println("Rest the code");
     }
 }
