@@ -10,7 +10,7 @@ public class hash_ex {
         map.put(1, "jini");
 
         System.out.println("Iterating Hashmap...");
-        for (Map.Entry m : map.entrySet()) {
+        for (Map.Entry<Integer, String> m : map.entrySet()) {
             System.out.println(m.getKey() + " " + m.getValue());
         }
     }
