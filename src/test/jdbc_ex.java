@@ -4,7 +4,7 @@ public class jdbc_ex {
     public static void main(String[] args) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbctest", "root", "Nik@0307");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Nik@0307");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from account");
             while (rs.next())
