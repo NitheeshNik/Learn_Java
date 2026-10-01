@@ -8,6 +8,8 @@ public class NumberAnalyzer {
         Scanner scan = new Scanner(System.in);
         int sum = 0;
         int tm = 0;
+        int Even = 0;
+        int odd = 0;
         System.out.println("How many numbers? ");
         int n = scan.nextInt();
         for (int i = 0; i < n; i++) {
@@ -18,11 +20,20 @@ public class NumberAnalyzer {
                 tm = current;
 
             }
+
+            if (current % 2 == 0) {
+                Even++;
+            } else {
+                odd++;
+            }
+
         }
 
         int average = avg(sum, n);
         System.out.println("Average: " + average);
-        System.out.println(tm);
+        System.out.println("Largest" + tm);
+        System.out.println("Even " + Even);
+        System.out.println("Odd " + odd);
 
     }
 
