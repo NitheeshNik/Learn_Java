@@ -6,3 +6,7 @@ bin/
 .settings/
 .project
 .classpath
+
+
+.git_corrupted/
+*.class
