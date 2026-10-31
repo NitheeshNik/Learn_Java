@@ -1,5 +1,3 @@
-package java_practice;
-
 public class StringBuff {
     public static void main(String a[]) {
         StringBuffer sb = new StringBuffer("Hello");

@@ -1,5 +1,3 @@
-package java_practice;
-
 import java.lang.StringBuilder;
 
 public class Stringbulid {
