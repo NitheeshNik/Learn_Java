@@ -25,11 +25,13 @@ public class PersonalProfile {
         System.out.println("===== PROFILE =====");
         System.out.printf("Name : %s%n", name);
         System.out.printf("Age : %d%n", age);
-        System.out.printf("Height : %d%n", height);
+        System.out.printf("Height : %.2f%n", height);
         System.out.printf("Student : %b%n", student);
         System.out.printf("Grade : %c%n", grade);
-        System.out.printf("Yearly : %.2lf%n", year);
+        System.out.printf("Yearly : %.2f%n", year);
         System.out.println("===================");
+
+        sc.close();
 
     }
 
