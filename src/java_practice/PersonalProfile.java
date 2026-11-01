@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class PersonalProfile {
     public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in); // Objection creation for scanner
-        // Read user input
         final int MONTHS = 12;
+
+        Scanner sc = new Scanner(System.in); // Scanner for keyboard input
+        // Read user input
 
         System.out.print("Name : ");
         String name = sc.nextLine();
@@ -25,7 +25,7 @@ public class PersonalProfile {
         System.out.print("Salary: ");
         double salary = sc.nextDouble();
 
-        // Calculation yearly salary
+        // Calculate yearly salary
         double totalSalary = salary * MONTHS;
         // print profile
         System.out.println("===== PROFILE =====");
@@ -40,7 +40,7 @@ public class PersonalProfile {
         // Limits section
         System.out.println("===== LIMITS =====");
         System.out.println("int max : " + Integer.MAX_VALUE);
-        System.out.println("int max : " + Long.MAX_VALUE);
+        System.out.println("long max : " + Long.MAX_VALUE);
         // int overflow: MAX_VALUE + 1 wraps around to the minimum value , no error
         System.out.println("int max+1 : " + (Integer.MAX_VALUE + 1));
 
