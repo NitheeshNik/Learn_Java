@@ -30,23 +30,23 @@ public class CastingLab {
         long wrongProduct = first * second; // multiplied as int first, overflows before it becomes long
         long rightProduct = (long) first * second;
 
-        // part A: Marks
+        // Part A: Marks
         System.out.println("===== A: MARKS =====");
         System.out.printf("Wrong average : %d%n", wrong);
         System.out.printf("Right average : %.2f%n", right);
         System.out.println("Rounded       : " + (int) Math.round(right));
         // Part B: Temperature
         System.out.println("===== B: TEMPERATURE =====");
-        System.out.printf("Int result    :%d%n", fahrenheitInt);
-        System.out.printf("Right result  :%.1f%n", fahrenheitExact);
+        System.out.printf("Int result    : %d%n", fahrenheitInt);
+        System.out.printf("Right result  : %.1f%n", fahrenheitExact);
         // Part C: Letters
         System.out.println("===== C: LETTERS =====");
-        System.out.printf("Code of %letter     : %d%n", letter, code);
+        System.out.printf("Code of %c     : %d%n", letter, code);
         System.out.println("Next letter   : " + ((char) (letter + 1)));// It shows next character of the letter.
         // Part D : Product
         System.out.println("===== D: PRODUCT =====");
-        System.out.println("Wrong product :" + wrongProduct);
-        System.out.println("Right product :" + rightProduct);
+        System.out.println("Wrong product : " + wrongProduct);
+        System.out.println("Right product : " + rightProduct);
 
         sc.close();
 
