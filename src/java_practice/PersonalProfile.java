@@ -26,7 +26,7 @@ public class PersonalProfile {
         double salary = sc.nextDouble();
 
         // Calculate yearly salary
-        double totalSalary = salary * MONTHS;
+        double totalSalary = (long) salary * MONTHS;
         // print profile
         System.out.println("===== PROFILE =====");
         System.out.printf("Name     : %s%n", name);
