@@ -1,12 +1,14 @@
 public class temperatureToolkit {
     public static void main(String[] args) {
-        int a = 100000;
-        int b = 100000;
+        char c = 'a';
+        int code = c;
+        char next = (char) (c + 1);
+        char fromNumber = (char) 97;
 
-        long wrong = a * b; // multiplied as int FIRST, overflows, then widened
-        long right = (long) a * b; // a becomes long first, so the multiply is long
-
-        System.out.println(wrong);
-        System.out.println(right);
+        System.out.println(code);
+        System.out.println(c + 1);
+        System.out.println(next);
+        System.out.println(fromNumber);
+        System.out.println('a' + 'b');
     }
 }
