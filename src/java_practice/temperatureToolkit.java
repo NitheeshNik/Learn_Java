@@ -1,13 +1,12 @@
 public class temperatureToolkit {
     public static void main(String[] args) {
+        int a = 100000;
+        int b = 100000;
 
-        int big = 130;
-        byte b = (byte) big;
-        System.out.println(b); // byte range is -128 to 127
+        long wrong = a * b; // multiplied as int FIRST, overflows, then widened
+        long right = (long) a * b; // a becomes long first, so the multiply is long
 
-        long l = 3000000000L;
-        int x = (int) l;
-        System.out.println(x);
-
+        System.out.println(wrong);
+        System.out.println(right);
     }
 }
