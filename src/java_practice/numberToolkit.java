@@ -8,7 +8,7 @@ public class numberToolkit {
         int totalSeconds = sc.nextInt();
         int hours = totalSeconds / 3600; // why 3600 : 1h = 3600 seconds
         int minutes = (totalSeconds % 3600) / 60;
-        int seconds = totalSeconds % 6;
+        int seconds = totalSeconds % 60;
 
         // Part B: Digits of a 3-digit number
         System.out.println("Enter 3-digit number: ");
@@ -20,7 +20,7 @@ public class numberToolkit {
         String reverse = lastDigit + "" + middleDigit + "" + firstDigit;
 
         // Part C : Boolean checks
-        int even = number % 2;
+        boolean even = number % 2 == 0;
         boolean check = number >= 100 && number <= 999;
         boolean division = number % 3 == 0 || number % 5 == 0;
         System.out.printf("%b%n", division);
@@ -44,7 +44,7 @@ public class numberToolkit {
         System.out.printf("Digit sum : %d%n", sum);
         System.out.printf("Reversed : %s%n", reverse);
         // Part : C
-        System.out.printf("Even                 : %d%n", even);
+        System.out.printf("Even                 : %b%n", even);
         System.out.printf("Between 100 and 999  : %b%n", check);
         System.out.printf("Divisible by 3 or 5  : %b%n", division);
         // Part:D
