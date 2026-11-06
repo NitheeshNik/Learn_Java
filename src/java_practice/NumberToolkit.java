@@ -41,7 +41,7 @@ public class NumberToolkit {
         // Part:B
         System.out.println("===== B: DIGITS =====");
         System.out.printf("Digit sum : %d%n", sum);
-        System.out.printf("Reversed  : %s%n", reversed);
+        System.out.printf("Reversed  : %D%n", reversed);
         // Part : C
         System.out.println("===== C: CHECKS =====");
         System.out.printf("isEven               : %b%n", isEven);
