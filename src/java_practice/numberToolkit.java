@@ -20,21 +20,19 @@ public class numberToolkit {
         String reverse = lastDigit + "" + middleDigit + "" + firstDigit;
 
         // Part C : Boolean checks
-        boolean even = number % 2 == 0;
-        boolean check = number >= 100 && number <= 999;
-        boolean division = number % 3 == 0 || number % 5 == 0;
-        System.out.printf("%b%n", division);
+        boolean isEven = number % 2 == 0;
+        boolean isInRange = number >= 100 && number <= 999;
+        boolean isDivisibleBy3Or5 = number % 3 == 0 || number % 5 == 0;
+        System.out.printf("%b%n", isDivisibleBy3Or5);
 
         // Part D: Trace the operators
         int p = 5;
         int q = p++ + ++p;
-        System.out.println("p = " + p + ", q = " + q);// My prediction p = 7, q = 12
 
         int m = 10;
         m -= 3;
         m *= 2;
         m %= 5;
-        System.out.println("m = " + m); // m = 4
 
         // Part:A
         System.out.println("===== A: SECONDS =====");
@@ -44,10 +42,15 @@ public class numberToolkit {
         System.out.printf("Digit sum : %d%n", sum);
         System.out.printf("Reversed : %s%n", reverse);
         // Part : C
-        System.out.printf("Even                 : %b%n", even);
-        System.out.printf("Between 100 and 999  : %b%n", check);
-        System.out.printf("Divisible by 3 or 5  : %b%n", division);
+        System.out.println("===== C: CHECKS =====");
+        System.out.printf("isEven                 : %b%n", isEven);
+        System.out.printf("Between 100 and 999  : %b%n", isInRange);
+        System.out.printf("Divisible by 3 or 5  : %b%n", isDivisibleBy3Or5);
         // Part:D
+        System.out.println("===== D: TRACE =====");
+        System.out.println("p = " + p + ", q = " + q);// My prediction p = 7, q = 12
+        System.out.println("m = " + m); // m = 4
+
         // p = 7, q = 12
         // m = 4
 
