@@ -17,7 +17,9 @@ public class numberToolkit {
         int middleDigit = (number / 10) % 10; // or (number % 100) / 10
         int lastDigit = number % 10;
         int sum = firstDigit + middleDigit + lastDigit;
-        String reverse = lastDigit + "" + middleDigit + "" + firstDigit;
+        int reversed = lastDigit * 100 + middleDigit * 10 + firstDigit;
+        // String reverse = lastDigit + "" + middleDigit + "" + firstDigit; -- also use
+        // this method alternative to reverse
 
         // Part C : Boolean checks
         boolean isEven = number % 2 == 0;
@@ -40,7 +42,7 @@ public class numberToolkit {
         // Part:B
         System.out.println("===== B: DIGITS =====");
         System.out.printf("Digit sum : %d%n", sum);
-        System.out.printf("Reversed : %s%n", reverse);
+        System.out.printf("Reversed : %s%n", reversed);
         // Part : C
         System.out.println("===== C: CHECKS =====");
         System.out.printf("isEven                 : %b%n", isEven);
