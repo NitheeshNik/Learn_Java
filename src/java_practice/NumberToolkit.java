@@ -25,7 +25,6 @@ public class NumberToolkit {
         boolean isEven = number % 2 == 0;
         boolean isInRange = number >= 100 && number <= 999;
         boolean isDivisibleBy3Or5 = number % 3 == 0 || number % 5 == 0;
-        System.out.printf("%b%n", isDivisibleBy3Or5);
 
         // Part D: Trace the operators
         int p = 5;
