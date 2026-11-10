@@ -3,10 +3,31 @@ import java.util.Scanner;
 public class DecisionToolkit {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // Part A: Grade
+        // Header
+        // Part:A
         System.out.print("Enter your Mark: ");
         int marks = sc.nextInt();
-        if (marks >= 90) {
+
+        // Part:B
+        System.out.println("Enter two number for calculation: ");
+        double numberOne = sc.nextDouble();
+        double numberTwo = sc.nextDouble();
+        System.out.println("Enter you operator");
+        char operator = sc.next().charAt(0);
+
+        // Part:C
+        System.out.println("Enter year: ");
+        int year = sc.nextInt();
+
+        // Part:D
+        System.out.println("Enter your day in number 1-7: ");
+        int day = sc.nextInt();
+
+        // Part A: Grade
+
+        if (marks < 0 || marks > 100) {
+            System.out.println("Invalid marks");
+        } else if (marks >= 90) {
             System.out.println("Grade : A");
         } else if (marks >= 75) {
             System.out.println("Grade : B");
@@ -15,67 +36,50 @@ public class DecisionToolkit {
         } else if (marks >= 40) {
             System.out.println("Grade : D");
         } else {
-            System.out.println("Fail");
+            System.out.println("Grade : Fail");
         }
 
         // Part B : Calculator
-        System.out.println("Enter two number: ");
-        double numberOne = sc.nextDouble();
-        double numberTwo = sc.nextDouble();
-        System.out.println("Enter you operator");
-        char operator = sc.next().charAt(0);
+        double result = 0;
+        boolean isValid = true;
+
         switch (operator) {
-            case '+':
-                double addition = numberOne + numberTwo;
-                System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo,
-                        addition);
-                break;
-
-            case '-':
-                double subraction = numberOne - numberTwo;
-                System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo,
-                        subraction);
-                break;
-
-            case '*':
-                double multiplication = numberOne * numberTwo;
-                System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo,
-                        multiplication);
-                break;
-
-            case '/':
+            case '+' -> result = numberOne + numberTwo;
+            case '-' -> result = numberOne - numberTwo;
+            case '*' -> result = numberOne * numberTwo;
+            case '/' -> {
                 if (numberTwo == 0) {
                     System.out.println("Error: cannot divide by zero");
+                    isValid = false;
+                } else {
+                    result = numberOne / numberTwo;
                 }
-                double division = numberOne / numberTwo;
-                System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo,
-                        division);
-                break;
-
-            case '%':
+            }
+            case '%' -> {
                 if (numberTwo == 0) {
                     System.out.println("Error: cannot divide by zero");
-                    break;
+                    isValid = false;
+                } else {
+                    result = numberOne % numberTwo;
                 }
-                double modulo = numberOne % numberTwo;
-                System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo,
-                        modulo);
-                break;
-            default:
-                System.out.println("Unknown operator");
-                break;
+            }
+            default -> {
+                System.out.println("Invalid Operator");
+                isValid = false;
+            }
+        }
+
+        if (isValid) {
+            System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo, result);
         }
 
         // Part C: Leap year
-        System.out.println("Enter year: ");
-        int year = sc.nextInt();
-        String result = ((year % 40 == 0 && year % 100 != 0) || year % 400 == 0) ? year + "is a leap year."
-                : year + "not an leap";
-        System.out.println(result);
+
+        String result1 = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? year + " is a leap year."
+                : year + " not an leap";
+        System.out.println(result1);
 
         // Part D: Day type
-        System.out.println("Enter your day in number 1-7: ");
-        int day = sc.nextInt();
 
         String dayName = switch (day) {
             case 1 -> "Monday";
