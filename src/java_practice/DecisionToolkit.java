@@ -27,19 +27,19 @@ public class DecisionToolkit {
         switch (operator) {
             case '+':
                 double addition = numberOne + numberTwo;
-                System.out.printf("%.2f %c %.2f = %.2f", numberOne, operator, numberTwo,
+                System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo,
                         addition);
                 break;
 
             case '-':
                 double subraction = numberOne - numberTwo;
-                System.out.printf("%.2f %c %.2f = %.2f", numberOne, operator, numberTwo,
+                System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo,
                         subraction);
                 break;
 
             case '*':
                 double multiplication = numberOne * numberTwo;
-                System.out.printf("%.2f %c %.2f = %.2f", numberOne, operator, numberTwo,
+                System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo,
                         multiplication);
                 break;
 
@@ -48,7 +48,7 @@ public class DecisionToolkit {
                     System.out.println("Error: cannot divide by zero");
                 }
                 double division = numberOne / numberTwo;
-                System.out.printf("%.2f %c %.2f = %.2f", numberOne, operator, numberTwo,
+                System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo,
                         division);
                 break;
 
@@ -90,6 +90,7 @@ public class DecisionToolkit {
         String decision = (day >= 0 && day <= 5) ? "Weekend" : "Weekday";
 
         System.out.println(dayName + ":" + decision);
+        sc.close();
 
     }
 }
