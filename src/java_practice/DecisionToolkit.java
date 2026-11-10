@@ -74,10 +74,9 @@ public class DecisionToolkit {
         }
 
         // Part C: Leap year
-
-        String result1 = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? year + " is a leap year."
-                : year + " not an leap";
-        System.out.println(result1);
+        boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+        String message = isLeapYear ? year + " is leap year" : year + " is not a  leap year";
+        System.out.println(message);
 
         // Part D: Day type
 
