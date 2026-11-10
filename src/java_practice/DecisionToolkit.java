@@ -4,27 +4,24 @@ public class DecisionToolkit {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         // Header
-        // Part:A
-        System.out.print("Enter your Mark: ");
+        System.out.print("Enter your Mark: "); // Part:A
         int marks = sc.nextInt();
 
-        // Part:B
-        System.out.println("Enter two number for calculation: ");
+        System.out.println("Enter first number: ");// Part:B
         double numberOne = sc.nextDouble();
-        double numberTwo = sc.nextDouble();
-        System.out.println("Enter you operator");
+        System.out.println("Enter your operator (+ - * / %):");
         char operator = sc.next().charAt(0);
+        System.out.println("Enter Second number: ");
+        double numberTwo = sc.nextDouble();
 
-        // Part:C
-        System.out.println("Enter year: ");
+        System.out.println("Enter year: ");// Part:C
         int year = sc.nextInt();
 
-        // Part:D
-        System.out.println("Enter your day in number 1-7: ");
+        System.out.println("Enter your day in number 1-7: ");// Part:D
         int day = sc.nextInt();
 
         // Part A: Grade
-
+        System.out.println("===== A: GRADE =====");
         if (marks < 0 || marks > 100) {
             System.out.println("Invalid marks");
         } else if (marks >= 90) {
@@ -40,6 +37,7 @@ public class DecisionToolkit {
         }
 
         // Part B : Calculator
+        System.out.println("===== B: CALCULATOR =====");
         double result = 0;
         boolean isValid = true;
 
@@ -64,35 +62,39 @@ public class DecisionToolkit {
                 }
             }
             default -> {
-                System.out.println("Invalid Operator");
+                System.out.println("Unknown operator");
                 isValid = false;
             }
         }
-
         if (isValid) {
             System.out.printf("%.2f %c %.2f = %.2f%n", numberOne, operator, numberTwo, result);
         }
 
         // Part C: Leap year
+        System.out.println("===== C: LEAP YEAR =====");
         boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
-        String message = isLeapYear ? year + " is leap year" : year + " is not a  leap year";
+        String message = isLeapYear ? year + " is a leap year" : year + " is not a leap year";
         System.out.println(message);
 
         // Part D: Day type
+        System.out.println("===== D: DAY =====");
+        if (day < 1 || day > 7) {
+            System.out.println("Invalid day");
+        } else {
+            String dayName = switch (day) {
+                case 1 -> "Monday";
+                case 2 -> "Tuesday";
+                case 3 -> "Wednesday";
+                case 4 -> "Thursday";
+                case 5 -> "Friday";
+                case 6 -> "Saturday";
+                case 7 -> "Sunday";
+                default -> "Invalid day";
+            };
+            String decision = (day == 6 || day == 7) ? "Weekend" : "Weekday";
+            System.out.println(dayName + " : " + decision);
+        }
 
-        String dayName = switch (day) {
-            case 1 -> "Monday";
-            case 2 -> "Tuesday";
-            case 3 -> "Wednesday";
-            case 4 -> "Thursday";
-            case 5 -> "Friday";
-            case 6 -> "Saturday";
-            case 7 -> "Sunday";
-            default -> "Invalid day";
-        };
-        String decision = (day >= 0 && day <= 5) ? "Weekend" : "Weekday";
-
-        System.out.println(dayName + ":" + decision);
         sc.close();
 
     }
