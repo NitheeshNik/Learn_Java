@@ -25,11 +25,13 @@ public class ForLoopPatterns {
         for (int i = 1; i <= 5; i++) {
             System.out.println("5 x " + i + " = " + (5 * i));
         }
+        System.out.println();
 
         // Factorial: 5! = 5 x 4 x 3 x 2 x 1
         long factorial = 1;
         for (int i = 1; i <= 5; i++) {
             factorial *= i;
+            System.out.println(factorial);
         }
         System.out.println("5! = " + factorial);
 
