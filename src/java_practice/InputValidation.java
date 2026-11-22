@@ -14,6 +14,7 @@ public class InputValidation {
             System.out.println("Invalid, try again");
         }
         System.out.println("Age saved: " + age);
+        sc.close();
     }
 
 }
